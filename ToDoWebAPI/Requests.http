@@ -1,0 +1,45 @@
+### Get All Todos
+GET http://localhost:5001/todos HTTP/1.1
+content-type: application/json
+
+### Get All Complete Todos
+GET http://localhost:5001/todos/complete HTTP/1.1
+content-type: application/json
+
+### Get All InComplete Todos
+GET http://localhost:5001/todos/incomplete HTTP/1.1
+content-type: application/json
+
+### Get ToDo Item By Id
+GET http://localhost:5001/todos/1 HTTP/1.1
+content-type: application/json
+
+### Add new ToDo Item
+POST http://localhost:5001/todos HTTP/1.1
+content-type: application/json
+
+{
+   "Title" : "Shopping",  "IsComplete" : false
+}
+
+### Update existing ToDo Item
+PUT http://localhost:5001/todos/1 HTTP/1.1
+content-type: application/json
+
+{
+    "Title" : "Shopping",
+    "IsComplete" : false
+}
+
+### Mark existing ToDo Item as compelte
+PUT https://localhost:5001/todos/1/complete HTTP/1.1
+content-type: application/json
+
+### Delete ToDo Item
+DELETE https://localhost:5001/todos/1 HTTP/1.1
+content-type: application/json
+
+### Delete All ToDo Items
+DELETE https://localhost:5001/todos/delete-all HTTP/1.1
+content-type: application/json
+
